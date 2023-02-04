@@ -1,5 +1,12 @@
 # module 1 lesson 6 step 4
+
+# full task:
+# Вам нужно открыть страницу по ссылке и заполнить форму на этой странице с помощью Selenium.
+# Если всё сделано правильно, то вы увидите окно с проверочным кодом. 
+# Это число вам нужно ввести в качестве ответа в этой задаче.
 # form link: http://suninjuly.github.io/simple_form_find_task.html
+
+# 22.338009735705008
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
