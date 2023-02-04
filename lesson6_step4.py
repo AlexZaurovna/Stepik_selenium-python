@@ -6,7 +6,8 @@
 # Это число вам нужно ввести в качестве ответа в этой задаче.
 # form link: http://suninjuly.github.io/simple_form_find_task.html
 
-# 22.338009735705008
+# Remember!
+# code will be useless after 30 seconds
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
