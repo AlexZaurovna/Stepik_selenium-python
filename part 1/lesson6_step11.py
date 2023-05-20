@@ -5,9 +5,6 @@
 # Тест падает с ошибкой NoSuchElementException http://suninjuly.github.io/registration2.html
 # Используемые селекторы должны быть уникальны
 
-# Remember!
-# code will be useless after 30 seconds
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -42,3 +39,6 @@ try:
 finally:
     time.sleep(10)
     browser.quit()
+
+# selector idea from another student:
+# browser.find_element(By.CSS_SELECTOR, 'div.first_block > div.form-group.first_class > input')
