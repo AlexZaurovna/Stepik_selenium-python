@@ -69,8 +69,8 @@ class TestLogin(unittest.TestCase):
             "https://stepik.org/lesson/236904/step/1",
             "https://stepik.org/lesson/236905/step/1"
         ]
-        login = "AlexZaurovna@yandex.ru"
-        password = "_mi_St3p1k_"
+        login = "your_login"
+        password = "your_password"
 
         browser = webdriver.Chrome()
         browser.get(link)
