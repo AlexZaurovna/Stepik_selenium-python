@@ -42,3 +42,22 @@ finally:
 
 # selector idea from another student:
 # browser.find_element(By.CSS_SELECTOR, 'div.first_block > div.form-group.first_class > input')
+
+# comments from reveiws:
+# """
+# в целом норм, но... 
+# можно было создать список из линков и пройтись по ним в цикле,
+# например: for link in links: browser.get(link) 
+# а также завести блок except try: ... except Exception as ex: print(ex) finally: ...
+# """
+# and
+# """
+# в целом норм, но... 
+# в место длинного ряда селекторов можно и покороче, 
+# например: '.first_block .first' 
+# а также завести создать список уникальных селекторов и пройтись по ним в цикле, например: 
+# uniq_selectors = ('.first', '.second', '.third') 
+# for u in uniq_selectors: 
+# element = browser.find_element(By.CSS_SELECTOR, '.first_block ' + u)
+# element.send_keys('My answer')
+# """
