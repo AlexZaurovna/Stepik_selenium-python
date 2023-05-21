@@ -16,12 +16,12 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-def test_check_page(link): 
+def check_page(link): 
     browser = webdriver.Chrome()
     browser.get(link)
     return browser
 
-def test_form_fill(browser):
+def form_fill(browser):
     required = browser.find_element(By.CLASS_NAME, 'first_block')
     input1 = required.find_element(By.CLASS_NAME, 'first')
     input1.send_keys("Ivan")
@@ -30,7 +30,7 @@ def test_form_fill(browser):
     input3 = required.find_element(By.CLASS_NAME, 'third')
     input3.send_keys("test@tes.te")
 
-def test_form_btn(browser):
+def form_btn(browser):
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
     welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
@@ -40,16 +40,16 @@ def test_form_btn(browser):
 class TestRegister(unittest.TestCase):
     def test_registration_form_1(self):
         link = "http://suninjuly.github.io/registration1.html"
-        browser=test_check_page(link)
-        test_form_fill(browser)
-        welcome_text=test_form_btn(browser)
+        browser=check_page(link)
+        form_fill(browser)
+        welcome_text=form_btn(browser)
         self.assertEqual('Congratulations! You have successfully registered!', welcome_text)
 
     def test_registration_form_2(self):
         link = "http://suninjuly.github.io/registration2.html"
-        browser=test_check_page(link)
-        test_form_fill(browser)
-        welcome_text=test_form_btn(browser)
+        browser=check_page(link)
+        form_fill(browser)
+        welcome_text=form_btn(browser)
         self.assertEqual('Congratulations! You have successfully registered!', welcome_text)
 
 if __name__ == "__main__":
